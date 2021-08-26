@@ -1,0 +1,25 @@
+{% ckan_extends %}
+
+ {% block home_primary %}
+  <header>
+    <h1 class="page-heading">Open data from Perú</h1>
+    <p>Search open data from all the public bodies within Middlehamptonshire.</p>
+  </header>
+{% endblock %}
+
+{% block home_image %}
+  <section class="featured media-overlay">
+    {% block home_image_content %}
+      <a class="media-image" href="/dataset">
+        <img src="{{ h.url_for_static('/promo.png') }}" alt="" width="420" height="220">
+      </a>
+    {% endblock %}
+  </section>
+{% endblock %}
+
+{% block secondary_content %}
+  <div class="row group-listing p-bottom">
+    {% snippet 'snippets/dataset_box.html', title='Popular datasets', icon='fire', datasets=h.popular_datasets() %}
+    {% snippet 'snippets/dataset_box.html', title='Latest datasets', icon='time', datasets=h.latest_datasets() %}
+  </div>
+{% endblock %}
