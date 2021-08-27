@@ -1,6 +1,10 @@
 {% ckan_extends %}
 
+{% block links -%}
+  <link rel="shortcut icon" href="favicon.ico" />
+{% endblock -%}
+
 {% block styles %}
   {{ super() }}
-  {% resource 'ckanext-mef_theme/styles/mef_theme.css' %}
+  {% resource 'ckanext-mef_theme/styles/mx.css' %}
 {% endblock %}
