@@ -15,10 +15,15 @@ Custom CKAN extension for a theme of MEF
 3. Edit the following settings to the `[app:main]` section of your CKAN config
    file (e.g. `development.ini` or `ckan.ini`):
 
-        ckan.plugins = mef_theme_customizations
+        ckan.plugins = mef_theme
 
 4. Run CKAN, e.g. `paster serve mef_theme.ini`
 
 Note on CKAN versions: at the time of writing the `master` branch of
 ckanext-mef_theme is intended to work with CKAN 2.0 (currently the `master`
 branch of ckan).
+
+5. Comands:
+/usr/lib/ckan/default/src/ckanext-mef_theme
+git pull
+supervisorctl restart ckan-uwsgi:*
