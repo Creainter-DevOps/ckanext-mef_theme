@@ -2,15 +2,12 @@
 
 {% block content %}
   <div role="main" class="hero">
-    <img src="https://datosabiertos.mef.ehg.pe/assets/img/img_mef/portada/montana_arcoiris_promperu.jpg" class="map">
+    <img src="//maps.googleapis.com/maps/api/staticmap?center=23.63450,-102.55278&zoom=7&size=640x300&sensor=false&scale=2" class="map">
     <div id="content" class="container">
       {{ self.flash() }}
       {{ self.primary_content() }}
+      {{ self.secondary_content() }}
     </div>
-  </div>
-  <br />
-  <div class="container">
-    {{ self.secondary_content() }}
   </div>
 {% endblock %}
 

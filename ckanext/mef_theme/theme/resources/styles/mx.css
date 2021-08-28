@@ -7,6 +7,10 @@
 /* ======================================================
    Global Styles
    ====================================================== */
+
+body {
+  background: #ffffff url(../../../base/images/bg.png)!important;
+}
 a,
 .btn-link {
   color: #87919f;
@@ -280,9 +284,14 @@ body {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
+.site-footer {
+  background: #010d10!important;
+}
+.masthead  {
+  background-color: #bd1b1b!important;
+}
 .account-masthead {
-  background-color: #000000;
-  background-image: none;
+  background: #222c2f!important;
 }
 .account-masthead .account ul li {
   border-color: #000000;
@@ -301,7 +310,6 @@ body {
 }
 .masthead,
 .masthead > .container .header-image {
-  background-color: #303030;
 }
 .masthead {
   background-image: url(../../images/logo.svg);
@@ -352,8 +360,11 @@ body {
   border-top-left-radius: 0;
   margin: 0;
   padding: 15px 30px;
-  border-top: solid 5px #303030;
+  border-top: solid 5px #fff;
   color: #e6e6e6;
+}
+.masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li a:focus, .masthead .navigation .nav-pills li.active a {
+    background-color: #060404!important;
 }
 .masthead .navigation .nav-pills li a:hover,
 .masthead .navigation .nav-pills li.active a {
@@ -369,11 +380,6 @@ body {
   margin: 12px 8px 2px 20px;
   display: none;
 }
-[role="main"],
-.main {
-  background-color: #f0f0f0;
-  background-image: none;
-}
 .toolbar .breadcrumb {
   font-style: italic;
   text-transform: lowercase;
@@ -385,6 +391,7 @@ body {
 .toolbar .breadcrumb li.home {
   display: none;
 }
+/*
 .wrapper {
   background-image: none;
   background-color: #FFF;
@@ -776,6 +783,7 @@ strong.count {
   border-top-left-radius: 0;
   border-top: solid 2px #a3abb6;
 }
+*/
 /* Footer */
 .site-footer,
 .site-footer label,
@@ -813,14 +821,26 @@ body,
   width: 80px;
 }
 /* Home */
+[role=main], .main {
+	min-height:unset!important;
+	background: none!important;
+}
+.main {
+	background: none!important;
+}
 .hero {
   overflow: hidden;
+  background: none!important;
 }
 .hero .map {
   position: absolute;
   width: 100%;
   min-height: 440px;
   top: 0;
+}
+.hero .tags {
+  padding: 10px;
+  padding-top: 0;
 }
 .hero .module-dark .module-content {
   background-color: #e6e6e6;
@@ -837,7 +857,7 @@ body,
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
-.hero .tags {
+/*.hero .tags {
   background-color: #a3abb6;
   -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 0;
@@ -851,7 +871,7 @@ body,
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-}
+}*/
 .hero .module-dark .heading {
   color: #333333;
 }
