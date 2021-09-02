@@ -1,7 +1,9 @@
 {% ckan_extends %}
 
 {% block header_logo %}
-  <a class="logo" href="/">{{ g.site_title }}</a>
+  <a class="navbar-brand" href="/">
+  <img src="{{ h.url_for_static('/header_logo.png') }}" alt="{{ g.site_title }}" />
+  </a>
   {% if g.site_description %}<h2>{{ g.site_description }}</h2>{% endif %}
 {% endblock %}
 

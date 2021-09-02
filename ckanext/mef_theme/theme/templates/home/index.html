@@ -1,34 +1,155 @@
 {% ckan_extends %}
 
 {% block content %}
-  <div role="main" class="hero">
-    <img src="https://datosabiertos.mef.ehg.pe/assets/img/img_mef/portada/montana_arcoiris_promperu.jpg" class="map">
-    <div id="content" class="container">
-      {{ self.flash() }}
-      {{ self.primary_content() }}
+<main id="content" role="main">
+<section id="hero" class="bg-tertiary py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h1 class="h2 text-white mb-3 datos-line-height-1"> DATOS ABIERTOS DEL MINISTERIO DE ECONOMÍA Y FINANZAS </h1>
+                <p class="text-white mb-4"> Ponemos a tu alcance datos públicos en formatos abiertos para que puedan usarlos, modificarlos y compartirlos. Estos datos son tuyos. Podés crear visualizaciones, aplicaciones y grandes herramientas con ellos. </p>
+		<form class="search mw-100 mb-3" method="get" action="{% url_for controller='dataset', action='search' %}">
+		<input type="text" class="form-control " style="border-radius: 14px 0  0  14px;" name="q" value="{{ c.q }}" autocomplete="off" placeholder="{{ _('Search datasets...') }}">
+                    <div class="search-action">
+			    <button type="submit" class="btn btn-outline-search" style="border-radius: 0 14px  14px 0 ;" aria-label="{{ _('Search') }}">
+				    <span class="fa fa-search" aria-hidden="true"></span>
+			    </button>
+		    </div>
+                </form>
+                <p class="text-white text-center"> Lo más buscado:
+                    <a class="ml-4 text-white" href="??tags=estadisticas"> Estadisticas </a>
+                    <a class="ml-4 text-white" href="??tags=ejecuci%C3%B3n+presupuestaria"> Ejecución presupu... </a>
+                    <a class="ml-4 text-white" href="??tags=Dataset"> Dataset </a>
+                </p>
+            </div>
+            <div class="col-10 col-sm-8 col-md-5 offset-1 offset-sm-2 offset-md-1">
+		  <img class="img-fluid w-90 iq-fadebounce iq-rocket" src="{{ h.url_for_static('/home_image01.svg') }}" alt="Personas mirando gráficos."> </div>
+        </div>
     </div>
-  </div>
-  <br />
-  <div class="container">
+</section>
+
+<section id="dataDetails" class="py-2">
+    <div class="container">
+        <header class="mb-5">
+            <h2 class="pb-2 mb-0 border-bottom border-accent"> Cifras </h2>
+        </header>
+        <div class="card-data-list">
+            <a class="card-data text-normal bg-white border_redondo" href="?">
+                <div class="card-data-title">
+                    <div class="card-data-quantity"> 3.985 </div>
+                    <h5>Conjunto de Datos</h5>
+                </div>
+                <p>Cantidad de Datos cargados</p>
+            </a> <a class="card-data text-normal bg-white border_redondo" href="?">
+                <div class="card-data-title">
+                    <div class="card-data-quantity"> 23 </div>
+                    <h5>Categorías</h5>
+                </div>
+                <p>Datos agrupados por categorías</p>
+            </a> <a class="card-data text-normal bg-white border_redondo" href="?">
+                <div class="card-data-title">
+                    <div class="card-data-quantity"> 525 </div>
+                    <h5>ssssssssss</h5>
+                </div>
+                <p>ssssssssssssssss</p>
+            </a> <a class="card-data text-normal bg-white border_redondo" href="?">
+                <div class="card-data-title">
+                    <div class="card-data-quantity"> 856.768.015 </div>
+                    <h5>Visitas</h5>
+                </div>
+                <p>Cantidad de visitas en los conjuntos de datos</p>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section id="functions" class="py-3">
+    <div class="container">
+        <header class="mb-4 mb-md-2">
+            <h2 class="mb-0 text-center"> CATEGORÍAS </h2>
+        </header>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="row list-unstyled mb-0 las_categorias  justify-content-center">
+                    <li class="border_redondo"> <a href="dataset.php"> <img src="assets/images/icons/1presupuesto_mef.png" alt="">
+                            <h3 class=" text-center">Presupuesto Público </h3>
+                        </a> </li>
+                    <li class="border_redondo"> <a href="dataset.php"> <img src="assets/images/icons/2endeudamiento_mef.png" alt="">
+                            <h3 class=" text-center">Endeudamiento y Tesoro Público </h3>
+                        </a> </li>
+                    <li class="border_redondo"> <a href="dataset.php"> <img src="assets/images/icons/3contabilidad_publica_mef.png" alt="">
+                            <h3 class=" text-center">Contabilidad Pública</h3>
+                        </a> </li>
+                    <li class="border_redondo"><a href="dataset.php"> <img src="assets/images/icons/4abastecimiento_mef.png" alt="">
+                            <h3 class=" text-center">Abastecimiento del Sector Público</h3>
+                        </a> </li>
+                    <li class="border_redondo"> <a href="dataset.php"> <img src="assets/images/icons/5recursoshumanos_mef.png" alt="">
+                            <h3 class=" text-center">Recursos Humanos del Sector Público</h3>
+                        </a> </li>
+                    <li class="border_redondo"> <a href="dataset.php"> <img src="assets/images/icons/6inversion_publica_mef.png" alt="">
+                            <h3 class=" text-center">Inversión Pública</h3>
+                        </a> </li>
+                </ul>
+            </div>
+        </div>
+</div></section>
+
+<section id="lastUpdatedData" class="py-5">
+    <div class="container">
+        <header class="mb-5">
+            <h2 class="pb-2 mb-0 border-bottom border-accent"> Datos actualizados recientemente </h2>
+        </header>
+        <ol class="row list-unstyled mb-0 lista_ultima">
+            <li class="col-md-4 mb-4 "><i class="fa fa-clock-o" style="color:#98BD1F"></i> <a class="black-link-hover" href="informacion.php?28194"> Las fuentes en la familia Cursiva imitan la e </a> </li>
+            <li class="col-md-4 mb-4 "><i class="fa fa-clock-o" style="color:#98BD1F"></i> <a class="black-link-hover" href="informacion.php?28192"> Las fuentes en la familia Cursiva imitan la e </a> </li>
+            <li class="col-md-4 mb-4 "><i class="fa fa-clock-o" style="color:#98BD1F"></i> <a class="black-link-hover" href="informacion.php?28198"> Las fuentes en la familia Cursiva imitan la e </a> </li>
+            <li class="col-md-4 mb-4 mb-md-0"><i class="fa fa-clock-o" style="color:#98BD1F"></i> <a class="black-link-hover" href="informacion.php?33353"> Las fuentes en la familia Cursiva imitan la e </a> </li>
+            <li class="col-md-4 mb-4 mb-md-0"><i class="fa fa-clock-o" style="color:#98BD1F"></i> <a class="black-link-hover" href="informacion.php?33355"> Las fuentes en la familia Cursiva imitan la e </a> </li>
+            <li class="col-md-4  mb-md-0"><i class="fa fa-clock-o" style="color:#98BD1F"></i> <a class="black-link-hover" href="informacion.php?ejecucion-presupuestaria-mensual-2021"> Las fuentes en la familia Cursiva imitan la e </a> </li>
+        </ol>
+    </div>
+</section>
+<header class="mb-4 mb-md-2">
+    <h2 class="mb-0 text-center"> INFORMACIÓN
+    </h2>
+</header>
+<section id="datos_abiertos" class="py-2 bg-light">
+    <div class="container">
+        <div class="row">
+            <header class="col-md-3 align-self-center mb-4 mb-md-0">
+                <h2 class="h3 mb-3"> ¿QUÉ SON DATOS ABIERTOS? </h2>
+            </header>
+            <div class="col-md-9">
+                <div class="card-organization border-0">
+                    <div class="card-organization-body border border-neutral border_redondo"> Son datos producidos por la Entidades Públicas, puestas a disposición de la ciudadanía para su uso, reuso y redistribución; siendo excluida la información protegida por la Ley de Transparencia y Acceso a la Información y demás normas relacionadas a la materia. Los datos abiertos son accesibles de forma gratuita, a través de formatos reutilizables, que facilitan su análisis y permiten generar un nuevo producto o servicio innovador que contribuya al desarrollo económico del país.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="gobierno_abierto" class="py-2 bg-light">
+
+    <div class="container">
+        <div class="row">
+            <header class="col-md-3 align-self-center mb-4 mb-md-0">
+                <h2 class="h3 mb-3"> ¿QUE ES GOBIERNO ABIERTO?
+                </h2>
+            </header>
+            <div class="col-md-9">
+                <div class="card-organization border-0">
+                    <div class="card-organization-body border border-neutral border_redondo"> El Gobierno Abierto es un eje transversal de la Política Nacional de Modernización de la Gestión Pública; es aquel que garantiza y promueve la transparencia, la participación ciudadana, la integridad pública y que aprovecha el poder de la tecnología para elevar sus niveles de eficacia y garantizar la rendición de cuentas. En ese contexto, el Ministerio de Economía y Finanzas, ha implementado el Portal de Datos Abiertos del MEF, con el objetivo de permitir el uso, reuso y redistribución de información económica y financiera del país. </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
     {{ self.secondary_content() }}
   </div>
-{% endblock %}
-
-{% block home_primary %}
-  <header>
-    <h1 class="page-heading">Open data from Perú</h1>
-    <p>Search open data from all the public bodies within Middlehamptonshire.</p>
-  </header>
-{% endblock %}
-
-{% block home_image %}
-  <section class="featured media-overlay">
-    {% block home_image_content %}
-      <a class="media-image" href="/dataset">
-        <img src="{{ h.url_for_static('/promo.png') }}" alt="" width="420" height="220">
-      </a>
-    {% endblock %}
-  </section>
+</section>
+</main>
 {% endblock %}
 
 {% block secondary_content %}

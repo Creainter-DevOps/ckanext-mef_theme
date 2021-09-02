@@ -1,0 +1,40 @@
+{% ckan_extends %}
+
+{% block content %}
+  <div role="main" class="hero">
+    <img src="https://datosabiertos.mef.ehg.pe/assets/img/img_mef/portada/montana_arcoiris_promperu.jpg" class="map">
+    <div id="content" class="container">
+      {{ self.flash() }}
+      {{ self.primary_content() }}
+    </div>
+  </div>
+  <br />
+  <div class="container">
+    {{ self.secondary_content() }}
+  </div>
+{% endblock %}
+
+{% block home_primary %}
+  <header>
+    <h1 class="page-heading">Open data from Perú</h1>
+    <p>Search open data from all the public bodies within Middlehamptonshire.</p>
+  </header>
+{% endblock %}
+
+{% block home_image %}
+  <section class="featured media-overlay">
+    {% block home_image_content %}
+      <a class="media-image" href="/dataset">
+        <img src="{{ h.url_for_static('/promo.png') }}" alt="" width="420" height="220">
+      </a>
+    {% endblock %}
+  </section>
+{% endblock %}
+
+{% block secondary_content %}
+  <div class="row group-listing p-bottom">
+    {% snippet 'snippets/dataset_box.html', title='Más populares', icon='fire', datasets=h.popular_datasets() %}
+    <br />
+    {% snippet 'snippets/dataset_box.html', title='Últimos Datos', icon='time', datasets=h.latest_datasets() %}
+  </div>
+{% endblock %}
