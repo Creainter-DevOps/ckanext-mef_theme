@@ -25,8 +25,8 @@
 	    <div class="col-md-4">
 	    <a class="card" href="{{ h.url_for('group.index') }}">
                     <div class="card-data-quantity">{{ h.SI_number_span(stats.group_count) }}</div>
-		    <div class="card-data-title">{{ _('group') if stats.group_count == 1 else _('groups') }}</div>
-		    <div class="card-data-desc">Conjunto de grupo de datos</div>
+		    <div class="card-data-title">Visitas</div>
+		    <div class="card-data-desc">Cantidad de visitas en los conjuntos de datos</div>
             </a>
 	    </div>
 	    {% endblock %}
