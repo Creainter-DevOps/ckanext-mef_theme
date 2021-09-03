@@ -8,9 +8,9 @@
 
         <div class="row">
 		{% block stats_group %}
-		<div class="col-md-4">
-            <a class="card" href="{{ h.url_for('dataset.search') }}">
-                    <div class="card-data-quantity card-data text-normal bg-white border_redondo">{{ h.SI_number_span(stats.dataset_count) }}</div>
+		<div class="col-md-4 card-data-list">
+            <a class="card card-data" href="{{ h.url_for('dataset.search') }}">
+                    <div class="card-data-quantity ">{{ h.SI_number_span(stats.dataset_count) }}</div>
 		    <div class="card-data-title">{{ _('dataset') if stats.dataset_count == 1 else _('datasets') }}</div>
 		    <div class="card-data-desc">Relación de datos disponible en la plataforma</div>
             </a>
