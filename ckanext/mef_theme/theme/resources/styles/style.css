@@ -635,34 +635,3 @@ footer a:hover {
 .border-bottom {
   border-bottom: 1px solid #dee2e6 !important;
 }
-.card-data-list .card-data:first-child {
-  background-color: #f5f6f7;
-}
-.card-data-list .card-data:not(:last-child) {
-  margin-bottom: 1rem;
-}
-.card-data-list .card-data:first-child {
-  background-color: #f5f6f7;
-}
-
-.card-data-list .card-data:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.card-data-list .card-data {
-  display: flex;
-  align-items: center;
-  height: 5.875rem;
-  padding: 16px;
-  background-color: #fff;
-  border: 1px solid #a8b7c7;
-}
-.card-data-list .card-data > .card-data-title > .card-data-quantity {
-  flex-shrink: 0;
-  height: 1.625rem;
-  margin-right: 10px;
-  overflow: hidden;
-  font-family: "Roboto Slab",serif;
-  font-size: 1.8125rem;
-  line-height: 1.625rem;
-}
