@@ -295,35 +295,6 @@ nav.navbar .navbar-brand {
   color: #fff;
 }
 
-.card-data-list .card-data:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-@media (min-width: 768px) {
-  .card-data-list .card-data {
-    display: block;
-    height: 11.925rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .card-data-list .card-data:not(:last-child) {
-    margin-right: 1rem;
-    border-bottom: 1px solid #a8b7c7;
-  }
-}
-
-.card-data-list .card-data:first-child {
-  background-color: #f5f6f7;
-}
-
-@media (min-width: 768px) {
-  .card-data-list .card-data {
-    display: block;
-    height: 9.6rem;
-  }
-}
-
 .las_categorias {
   display: flex;
   padding-left: 0;
