@@ -1,0 +1,22 @@
+{% set url=h.url_for(organization.type ~ '.read', id=organization.name) %}
+{% block organization_item %}
+<a href="{{ url }}" style="text-decoration: none;">
+  <section class="organization">
+    {% block organization_item_header %}
+        {% block organization_item_header_image %}
+        <div class="organization-image">
+          <img src="{{ organization.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" alt="{{ organization.name }}" />
+        </div>
+        {% endblock %}
+        {% block organization_item_header_title %}
+	<h3 class="organization-heading">{{ organization.title or organization.name }}</h3>
+        {% endblock %}
+    {% endblock %}
+  </section>
+  </a>
+{% endblock %}
+
+
+<!--  <a href="dataset.php"> <img src="assets/images/icons/6inversion_publica_mef.png" alt="">
+                            <h3 class=" text-center">Inversión Pública</h3>
+ </a> -->

@@ -1,14 +1,41 @@
-{% ckan_extends %}
+<footer class="content-always-on-display">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 a11y-fonts-col-12">
+                <p class="mb-4">
+                    Ministerio de Economía y Finanzas
+                </p>
+                <p>
+                <ul class="footer_datos">
+                    <li> <b>Dirección:</b></li>
+                    <li> <i class="fa fa-home" style="color:#F4BB47"></i> Jr. Junín 319, Cercado de Lima, Lima - Perú</li>
+                    <li> <br></li>
+                    <li> <b>Central Telefónica</b></li>
+                    <li> <i class="fa fa-phone" style="color:#F4BB47"></i> <a href="tel:+5113115930">(511) 311 5930</a></li>
+                    <li> <br></li>
+                    <li> <i class="fa fa-link" style="color:#F4BB47"></i> <a href="https://mef.gob.pe" target="blank">www.mef.gob.pe</a></li>
 
-{% block footer_lang %}
-  <p><small>&copy; 2021 MEF</small></p>
-{% endblock %}
+                </ul>
+                </p>
+            </div>
+            <div class="col-md-3 a11y-fonts-col-12">
+            </div>
+            <div class="col-md-3 a11y-fonts-col-12">
+            </div>
+            <div class="col-md-3 a11y-fonts-col-12">
+                <p class="mb-4">
+                <div style="font-size:13px">
+                    <b> Mesa de Partes:</b><br> Lunes a viernes de 08:30 am a 04:30 pm
+                    <br> <br>
+                    Ministerio de Economía y Finanzas
+                </div>
+		<div style="text-align:center;">
+		<img class="mw-100 mb-4" src="{{ h.url_for_static('/images/footer_logo.png') }}" alt="" />
+		</div>
+                </p>
+            </div>
 
-{% block footer_content %}
-  <div class="attribution">
-    <p><a href="http://www.opendefinition.org/okd/"><img src="http://assets.okfn.org/images/ok_buttons/od_80x15_blue.png" alt="Open Data"></a></p>
-    {% block footer_attribution %}
-    <p>{% trans %}Powered by <a class="hide-text ckan-footer-logo" href="http://ckan.org">CKAN</a>{% endtrans %}</p>
-    {% endblock %}
-  </div>
-{% endblock %}
+        </div>
+
+    </div>
+</footer>

@@ -1,0 +1,14 @@
+{% set organizations = h.get_featured_organizations(count=10) %}
+<section class="block-organizations">
+    <div class="container">
+        <h2 class="text-center">CATEGORÍAS</h2>
+        <div class="row">
+{% for organization in organizations %}
+      <div class="col-md-2">
+    {% snippet 'snippets/organization_item.html', organization=organization %}
+  </div>
+{% endfor %}
+            </div>
+        </div>
+</div>
+</section>
