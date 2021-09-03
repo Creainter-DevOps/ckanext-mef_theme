@@ -1,7 +1,11 @@
 {% set stats = h.get_site_statistics() %}
 <section class="block-stats">
     <div class="container">
-        <h2 style="text-align: center;margin-bottom: 20px;margin-top: 30px;">{{ _('{0} statistics').format(g.site_title) }}</h2>
+        <h2 class="pb-2 mb-0 border-bottom border-accent">
+			
+			{{ _('{0} statistics').format(g.site_title) }}<br>Estadísticas</h2>
+
+
         <div class="row">
 		{% block stats_group %}
 		<div class="col-md-4">
