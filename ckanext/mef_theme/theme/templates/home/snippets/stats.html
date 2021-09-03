@@ -6,9 +6,9 @@
 			{{ _('{0} statistics').format(g.site_title) }}<br>Estadísticas</h2>
 
 
-        <div class="row">
+        <div class="row card-data-list">
 		{% block stats_group %}
-		<div class="col-md-4 card-data-list">
+		<div class="col-md-4 ">
             <a class="card card-data" href="{{ h.url_for('dataset.search') }}">
                     <div class="card-data-quantity ">{{ h.SI_number_span(stats.dataset_count) }}</div>
 		    <div class="card-data-title">{{ _('dataset') if stats.dataset_count == 1 else _('datasets') }}</div>
