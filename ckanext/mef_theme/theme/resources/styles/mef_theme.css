@@ -70,3 +70,21 @@ body {
 .hero {
   background: url("/homepage-background.jpg") repeat-x center center;
 }
+
+.border-accent {
+  border-color: #a8b7c7 !important;
+}
+.pb-2,
+.py-2 {
+  padding-bottom: 0.5rem !important;
+}
+.mb-0,
+.my-0 {
+  margin-bottom: 0 !important;
+}
+.border-accent {
+  border-color: #a8b7c7 !important;
+}
+.border-bottom {
+  border-bottom: 1px solid #dee2e6 !important;
+}
