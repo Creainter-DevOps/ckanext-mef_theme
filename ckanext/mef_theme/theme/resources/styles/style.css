@@ -287,7 +287,7 @@ nav.navbar .navbar-brand {
 }
 
 .card-data-list .card-data:hover {
-  color: #fff;
+  color: #fff !important;
   background-color: #84c257 !important;
 }
 
