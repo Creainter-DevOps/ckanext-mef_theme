@@ -9,7 +9,7 @@
    ====================================================== */
 
 body {
-  background: #ffffff url(../../../base/images/bg.png)!important;
+  background: #ffffff url(../../../base/images/bg.png) !important;
 }
 a,
 .btn-link {
@@ -243,9 +243,9 @@ input[type="color"]:focus,
   background-color: #b1b8c1;
 }
 .btn-danger {
-  background-color: #DA4F49;
+  background-color: #da4f49;
   background-image: none;
-  border-color: #DA4F49;
+  border-color: #da4f49;
   filter: none;
 }
 .btn-danger:hover,
@@ -281,17 +281,17 @@ input[type="color"]:focus,
    Layout & Targeted Styles
    ====================================================== */
 body {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 .site-footer {
-  background: #010d10!important;
+  background: #010d10 !important;
 }
-.masthead  {
-  background-color: #bd1b1b!important;
+.masthead {
+  background-color: #bd1b1b !important;
 }
 .account-masthead {
-  background: #222c2f!important;
+  background: #222c2f !important;
 }
 .account-masthead .account ul li {
   border-color: #000000;
@@ -321,11 +321,11 @@ body {
   background-image: url(../../images/logo.png);
 }
 .masthead .logo {
-  font-family: "Abel", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Abel", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 30px;
   font-weight: 400;
-  color: #FFF;
+  color: #fff;
   display: block;
   padding-top: 46px;
 }
@@ -363,8 +363,10 @@ body {
   border-top: solid 5px #fff;
   color: #e6e6e6;
 }
-.masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li a:focus, .masthead .navigation .nav-pills li.active a {
-    background-color: #060404!important;
+.masthead .navigation .nav-pills li a:hover,
+.masthead .navigation .nav-pills li a:focus,
+.masthead .navigation .nav-pills li.active a {
+  background-color: #060404 !important;
 }
 .masthead .navigation .nav-pills li a:hover,
 .masthead .navigation .nav-pills li.active a {
@@ -676,7 +678,7 @@ body {
 }
 .groups.wrapper .secondary .module-heading {
   background-color: #a3abb6;
-  color: #FFF;
+  color: #fff;
   border-bottom: solid 2px #000000;
   font-weight: 300;
   font-style: italic;
@@ -685,7 +687,7 @@ body {
 }
 .groups.wrapper .secondary .module .module-content {
   background-color: #a3abb6;
-  color: #FFF;
+  color: #fff;
 }
 .groups.wrapper .primary:before {
   background-color: #a3abb6;
@@ -789,7 +791,7 @@ strong.count {
 .site-footer label,
 .site-footer small,
 .site-footer a {
-  color: #FFF;
+  color: #fff;
 }
 body,
 .site-footer {
@@ -821,16 +823,17 @@ body,
   width: 80px;
 }
 /* Home */
-[role=main], .main {
-	min-height:unset!important;
-	background: none!important;
+[role="main"],
+.main {
+  min-height: unset !important;
+  background: none !important;
 }
 .main {
-	background: none!important;
+  background: none !important;
 }
 .hero {
   overflow: hidden;
-  background: none!important;
+  background: none !important;
 }
 .hero .map {
   position: absolute;
@@ -927,7 +930,6 @@ body,
   }
 }
 
-
 .border-accent {
   border-color: #a8b7c7 !important;
 }
@@ -944,4 +946,47 @@ body,
 }
 .border-bottom {
   border-bottom: 1px solid #dee2e6 !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #dee2e6 !important;
+}
+.card-data-list .card-data:first-child {
+  background-color: #f5f6f7;
+}
+.card-data-list .card-data:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.card-data-list .card-data:first-child {
+  background-color: #f5f6f7;
+}
+
+.card-data-list .card-data:not(:last-child) {
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .card-data-list .card-data {
+    display: block;
+    height: 9.6rem;
+  }
+}
+@media (min-width: 768px) {
+  .card-data-list .card-data {
+    display: block;
+    height: 11.925rem;
+  }
+}
+@media (min-width: 768px) {
+  .card-data-list .card-data {
+    display: block;
+    height: 9rem;
+  }
+}
+.card-data-list .card-data {
+  display: flex;
+  align-items: center;
+  height: 5.875rem;
+  padding: 16px;
+  background-color: #fff;
+  border: 1px solid #a8b7c7;
 }
