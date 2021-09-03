@@ -231,6 +231,9 @@ nav.navbar .navbar-brand {
   border: 1px solid #dddddd;
   margin-bottom: 10px;
 }
+.links .form-controls {
+  padding: 10px;
+}
 .comment h3 {
   padding: 0;
   margin: 0;
