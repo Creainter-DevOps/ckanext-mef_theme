@@ -231,6 +231,10 @@ nav.navbar .navbar-brand {
   border: 1px solid #dddddd;
   margin-bottom: 10px;
 }
+.media-item .media-image {
+    max-height: 90px;
+    margin: 0 auto;
+}
 .links .form-controls {
   padding: 10px;
 }
