@@ -4,3 +4,4 @@
 .DS_Store
 build/
 dist/
+ckanext/mef_theme/theme/public/stats.txt.
