@@ -1,10 +1,101 @@
 /* Navbar */
 body {
   background-color: #e8e8e8 !important;
+  font-family: 'Roboto', sans-serif !important;
 }
 .account-masthead {
-  background: #272727 url(/base/images/bg.png) !important;
+  background: white  !important;
 }
+ul.navbar-nav{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+/*Categorias  */
+
+.media-description {
+  word-wrap: normal !important;
+  word-break: normal !important;
+}
+.context-info .description {
+   word-wrap: normal !important; 
+   word-break: normal  !important;
+}
+.media-grid .media-item{
+	height: 305px;
+}
+/*.media-grid {
+	height:max-content !important;
+}*/
+/* Vista dataset*/
+.label[data-format=csv], .label[data-format*=csv] {
+  background-color: #84C157 !important;
+}
+.badge {
+  background-color: #004899 !important;
+}
+
+/* flujo de actividad */
+
+.activity .item.changed-organization .icon {
+    background-color: #3ABEB0 !important;
+}
+
+.activity .item.changed-package .icon {
+    background-color: #9398EC !important;
+}
+
+.label-default {
+    background-color: #004899 !important;
+}
+
+.activity .item.new-package .icon {
+    background-color: #97BD1E !important;
+}
+#hero{
+    padding: 50px 0;	
+}
+.account-masthead .account ul li{
+	border:0 !important;
+	margin-left: 5px;
+}
+.account-masthead {
+    padding: 10px 5px;
+}
+.account-masthead .account ul li a{
+    border-radius: 5px;
+    background: white;
+    color: black ;
+    font-weight: 500;
+    line-height: 2.5;
+}
+
+.account-masthead .account ul li:nth-child(1) a {
+    color :black;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 8px;
+    line-height: 2.2;	
+}
+
+
+.account-masthead .account ul li:nth-child(1) a:hover {
+color: white;
+    background-color: #3ABEB0 !important;
+    text-decoration: none  ;	
+}
+.account-masthead .account ul li .register {
+    background: #0093f8;
+    font-weight: 800;
+    border-radius: 5px;
+    color: white;
+}
+.account-masthead .account ul li .register:hover {
+    color: white !important  ;
+    background-color: #3ABEB0 !important ;
+    text-decoration: none;
+} 
 
 header {
   background: #fff !important;
@@ -62,33 +153,53 @@ li.nav-item {
   margin: 4px 4px;
 }
 .tags {
+
   padding: 20px 0;
   color: #fff;
 }
 
+a.tag:hover {
+  background-color: #005DB8 !important ;
+  border: 1px solid  #005DB8 !important ;
+  -webkit-box-shadow: inset 0 1px 0 #005DB8 !important ;
+  box-shadow: inset 0 1px 0 #005DB8;
+}
+a.tag{
+  border-radius: 8px !important;	
+}
+
 .block-stats .card {
+  height : 18rem; 
   display: block;
   margin: 0 auto;
   max-width: 260px;
-  border: 1px solid #69778c;
-  padding: 10px;
+  border: 1px solid #004899 ;
+  padding: 20px 10px;
   border-radius: 5px;
   color: #000;
   text-decoration: none;
   background: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align:center;
 }
+
 .card .card-data-quantity {
-  font-size: 30px;
-  line-height: 48px;
+  font-size: 38px;
+  !importantline-height: 48px;
+  font-weight:bold;
+
 }
+
 .card .card-data-title {
-  font-size: 20px;
+  font-size: 23px;
   line-height: 20px;
+  font-weight: 500;
 }
 .card .card-data-desc {
-  font-size: 13px;
+  font-size: 14px;
   padding: 10px 0;
-  color: #756b6b;
 }
 section.block-info {
   margin-bottom: 20px;
@@ -104,10 +215,10 @@ section.block-info {
   padding: 10px;
   border-radius: 5px;
   min-height: 225px;
-  color: #00489a;
+  color: #004899;
 }
 .organization:hover {
-  background: #f4bb47;
+  background: #005DB8 ;
   color: #fff;
 }
 .organization:hover .organization-image img {
@@ -282,21 +393,31 @@ nav.navbar .navbar-brand {
 .bg-tertiary,
 .content-always-on-display {
   background: rgb(2, 0, 36);
-  background: linear-gradient(
+  /*background: linear-gradient(
     90deg,
     rgb(0, 72, 154) 0%,
     rgba(0, 91, 193, 1) 67%,
     rgba(0, 141, 184, 1) 100%
-  );
+  );*/
+ background: linear-gradient(90deg, rgb(0 147 248) 44%, rgb(58 191 176) 57% );
+}
+.account-masthead {
+    border-bottom: 2px solid #004899 !important;
 }
 
 .card-data-list .card-data:hover {
   color: #fff !important;
-  background-color: #84c257 !important;
+  background-color: #004899  !important;
 }
-
+ 
 .card-data-list .card-data:hover p {
   color: #fff;
+}
+
+.card-data-list {
+margin-bottom: 20px;
+    margin-top: 20px;
+
 }
 
 .las_categorias {
@@ -338,7 +459,7 @@ nav.navbar .navbar-brand {
 
 .footer_datos li {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   align-items: center;
 }
 
@@ -530,7 +651,7 @@ Back to Top
 }
 
 nav.navbar .navbar-nav .nav-item:not(.dropdown) .nav-link:hover {
-  color: #008db8 !important;
+  text-decoration: underline;
 }
 
 nav.navbar.navbar-dark .navbar-nav .nav-item .nav-link {

@@ -4,26 +4,25 @@
         <h2 class="pb-2 mb-0 border-bottom border-accent">
 			Portal de Datos Abiertos del MEF <br>Estadísticas
 		</h2></center>
-<p></p>
 
-        <div class="row card-data-list" >
+        <div class="row card-data-list"   >
 		{% block stats_group %}
 		<div class="col-md-4">
-            <a class="card card-data" style="height: 14.925rem;" href="{{ h.url_for('dataset.search') }}">
+            <a class="card card-data" href="{{ h.url_for('dataset.search') }}">
                     <div class="card-data-quantity ">{{ h.SI_number_span(stats.dataset_count) }}</div>
-		    <div class="card-data-title">{{ _('dataset') if stats.dataset_count == 1 else _('datasets') }}</div>
+		   <div class="card-data-title">{{  _('dataset') if stats.dataset_count == 1 else _('datasets') }}</div>
 		    <div class="card-data-desc">Relación de datos disponible en la plataforma</div>
             </a>
 		</div>
 	    <div class="col-md-4 ">
-	    <a class="card card-data" style="height: 14.925rem;" href="{{ h.url_for('organization.index') }}">
+	    <a class="card card-data"  href="{{ h.url_for('organization.index') }}">
                     <div class="card-data-quantity">{{ h.SI_number_span(stats.organization_count) }}</div>
 		    <div class="card-data-title">{{ _('organization') if stats.organization_count == 1 else _('organizations') }}</div>
 		    <div class="card-data-desc">Agrupada en categorías para una fácil busqueda</div>
             </a>
 	    </div>
 	    <div class="col-md-4  ">
-	    <a class="card card-data" style="height: 14.925rem;" href="{{ h.url_for('group.index') }}">
+	    <a class="card card-data" >
 		    
                     <div class="card-data-quantity Contando_Visitas"  data-stop="100">{{ h.SI_number_span(stats.group_count) }}</div>
 		    <div class="card-data-title">Visitas</div>
